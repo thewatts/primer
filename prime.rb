@@ -8,7 +8,7 @@ puts "\n\n"
 print "Enter your desired prime... "
 desired_prime = gets.chomp.to_i
 
-# @bar = ProgressBar.new(desired_prime, :bar, :counter, :percentage, :elapsed)
+@bar = ProgressBar.new(desired_prime, :bar, :counter, :percentage, :elapsed)
 
 class Primer
 
@@ -34,12 +34,16 @@ class Primer
   private
 
     def find_next_prime_number
+
+      # innocent until proven otherwise
       failure = false
+
       while primes.length < desired_prime and !failure
 
         failure = false
         primes.each do |prime|
           if (@num % prime) == 0
+            # number is not a prime. sad day
             failure = true
             @num += 1
           end
