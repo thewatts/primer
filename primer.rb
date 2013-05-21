@@ -20,7 +20,8 @@ class Primer
     @primes        = [2] # 2 is the first prime
     @num           = 3   # our starting number
     @failure       = false # innocent until proven otherwise
-    @bar = ProgressBar.new(desired_prime, :bar, :counter, :percentage, :elapsed)
+    @bar           = ProgressBar.new(desired_prime, :bar, :counter,
+                                     :percentage, :elapsed)
   end
 
   def calculate
