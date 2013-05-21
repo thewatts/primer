@@ -8,64 +8,60 @@ puts "\n\n"
 print "Enter your desired prime... "
 desired_prime = gets.chomp.to_i
 
+# @bar = ProgressBar.new(desired_prime, :bar, :counter, :percentage, :elapsed)
+
 class Primer
 
   attr_accessor :primes
   attr_accessor :num
-  attr_reader   :max
+  attr_reader   :desired_prime
 
-  def initialize(max)
-    @max = max
+  def initialize(desired_prime)
+    @desired_prime = desired_prime
     @primes = [2]
     @num = 3
   end
 
   def calculate
-    unless max_is_prime?
-      find_next_prime_number
-    end
+    # unless desired_prime_is_prime?
+    find_next_prime_number
+    # end
 
     primes.last
   end
 
-  def self.calculate(max)
-    new(max).calculate
+  def self.calculate(desired_prime)
+    new(desired_prime).calculate
   end
 
   private
 
-    # def current_num_is_prime?
-    #   false
-    # end
-
     def find_next_prime_number
       failure = false
+      while primes.length < desired_prime and !failure
 
-      while @primes.length <= max and !failure
-        @primes.each do |prime|
-          # puts "#{prime}"
-          puts "==> #{num}"
+        failure = false
+
+        primes.each do |prime|
           if (@num % prime) == 0
             failure = true
+            @num += 1
           end
         end
 
         unless failure
-          @primes << @num
-          @num = @num + 1
+          primes << @num
+          @num += 1
         end
+        failure = false
       end
     end
 
-    def max_is_prime?
-      max == 1
-    end
-
-
-
+    # def desired_prime_is_prime?
+    #   desired_prime == 1
+    # end
 end
 
-@bar = ProgressBar.new(desired_prime, :bar, :counter, :percentage, :elapsed)
 
 # def prime(desired_prime)
 #   # create our array of primes
@@ -108,4 +104,4 @@ end
 
 #prime(desired_prime)
 
-puts Primer.calculate(desired_prime)
+puts "\n\nTHE ANSWER IS " + Primer.calculate(desired_prime).to_s
