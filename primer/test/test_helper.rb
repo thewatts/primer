@@ -1,0 +1,2 @@
+# HI.
+require 'minitest/autorun'
