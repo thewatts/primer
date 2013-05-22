@@ -1,1 +1,1 @@
-require 'primer/primer.rb'
+require_relative 'primer/base'

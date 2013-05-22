@@ -10,6 +10,10 @@ More than anything, this is me working to improve my understanding of ruby
 Specifically built to answer
 [Problem 7 from Project Euler](http://projecteuler.net/problem=7 "Problem 7 | Project Euler")
 
+## How do I use this and its amazingness?!
+
+`ruby lib/primer.rb` should do the trick, though I'm new at this thing.
+
 ## Things I've learned thus far (as obvious as they may be)
 
 ### Methods
