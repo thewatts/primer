@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
+require 'primer'
+
+# start 'er up
+primer = Primer::Calculation.new
+primer.start
+
+while desired_prime = gets.chomp
+  primer.run(desired_prime)
+end
