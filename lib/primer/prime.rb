@@ -1,3 +1,13 @@
+=begin
+
+  This is the original file, which I wrote out just to get the main piece working.
+  I have since tried to break it down and made it more readable, as well as 
+  place it into some sort of structure...
+
+=end
+
+
+
 require 'progress_bar'
 
 puts "\n\n"
