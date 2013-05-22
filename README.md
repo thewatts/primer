@@ -11,8 +11,11 @@ Specifically built to answer
 [Problem 7 from Project Euler](http://projecteuler.net/problem=7 "Problem 7 | Project Euler")
 
 ## How do I use this and its amazingness?!
-
-`ruby bin/primer` should do the trick, though I'm new at this thing.
+- `git clone git@github.com:thewatts/primer.git`
+- `cd primer`
+- `bundle install` (needed for
+  [progress_bar](https://github.com/paul/progress_bar))
+- `ruby bin/primer` should do the trick, though I'm new at this thing.
 
 ## Things I've learned/observed thus far (as obvious as they may be)
 
@@ -34,4 +37,4 @@ Specifically built to answer
   confusing.
 
 ### Credits
-- @jdtornow for helping me break down my original file `lib/primer/prime.rb` into smaller chunks & for giving me a 101 on testing!
+- [@jdtornow](http://github.com/jdtornow) for helping me break down my original file `lib/primer/prime.rb` into smaller chunks & for giving me a 101 on testing!
