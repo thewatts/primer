@@ -10,12 +10,9 @@ module Primer
 
     def initialize
       @output        = Primer::Message.new
-      @desired_prime = desired_prime
       @primes        = [2]   # 2 is the first prime
       @num           = 3     # our starting number
       @failure       = false # innocent until proven otherwise
-      @bar           = ProgressBar.new(desired_prime, :bar, :counter,
-                                       :percentage, :elapsed)
     end
 
     def start
@@ -26,6 +23,8 @@ module Primer
     def run(desired_prime)
       unless desired_prime.downcase == "exit"
         @desired_prime = desired_prime.to_i
+        @bar           = ProgressBar.new(@desired_prime, :bar, :counter,
+                                         :percentage, :elapsed)
         calculate
       else
         finish

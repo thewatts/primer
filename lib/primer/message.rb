@@ -23,7 +23,7 @@ module Primer
 
     def continue
       puts "\nEnter another value or type EXIT to quit!\n\n"
-      print "Desired prime: "
+      print " - Desired prime: "
     end
 
     def solution(desired_prime, solution)
