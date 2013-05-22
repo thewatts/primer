@@ -1,8 +1,0 @@
-#!/usr/bin/env ruby
-$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
-require 'primer'
-
-prime = Primer::Prime.new(STDOUT)
-desired_prime = gets.chomp
-prime.calculate
-at_exit { puts "\n ==> Thanks for using PRIMER! Have a great day!"}
