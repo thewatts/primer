@@ -46,26 +46,14 @@ module Primer
       new(desired_prime).calculate
     end
 
-    # in order to check if a number is a prime,
-    # you can divide it by all the other primes that are less than itself
-    # if it is not divisible by any of them => said number is a prime.
-    def divide_by_prime_for_remainder
-      # loop through our primes, which increase every time we find one
-      primes.each do |prime|
-        if (@num % prime) == 0
-          @failure = true # means the num is not a prime
-          break # therefore stop looping
-        end
-      end
-      @failure
-    end
+
 
     def finish
       @output.exit
       exit
     end
 
-    private
+    # private
 
       # the length of our primes array will be the same as our desired prime.
       #   ex: if we have 3 primes in the array, [2,3,5] - our desired 3rd prime
@@ -84,8 +72,22 @@ module Primer
           @num += 1 # increment
           @failure = false # reset flag
         end
-
       end
+
+      # in order to check if a number is a prime,
+      # you can divide it by all the other primes that are less than itself
+      # if it is not divisible by any of them => said number is a prime.
+      def divide_by_prime_for_remainder
+        # loop through our primes, which increase every time we find one
+        primes.each do |prime|
+          if (@num % prime) == 0
+            @failure = true # means the num is not a prime
+            break # therefore stop looping
+          end
+        end
+        @failure
+      end
+
   end
 end
 
