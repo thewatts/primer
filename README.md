@@ -12,7 +12,7 @@ Specifically built to answer
 
 ## How do I use this and its amazingness?!
 
-`ruby lib/primer.rb` should do the trick, though I'm new at this thing.
+`ruby bin/primer` should do the trick, though I'm new at this thing.
 
 ## Things I've learned thus far (as obvious as they may be)
 
