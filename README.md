@@ -34,4 +34,4 @@ Specifically built to answer
   confusing.
 
 ### Credits
-
+- @jdtornow for helping me break down my original file `lib/primer/prime.rb` into smaller chunks & for giving me a 101 on testing!
