@@ -41,3 +41,6 @@ Specifically built to answer
 - [@ernie](http://github.com/ernie) for giving me perspective on naming
   conventions and evaluating true use case for the project - command line app
   vs what I have now (with the messages, outputs, etc)!
+- [@steveklabnik](http://github.com/steveklabnik) for sharing some code smells
+  (ex: require_relative) and pointing me in the directino of some services,
+  such as CodeClimate/TravisCI/Coveralls.io!
