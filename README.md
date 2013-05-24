@@ -31,6 +31,11 @@ Specifically built to answer
   Book](http://pragprog.com/book/achbd/the-rspec-book)'s
   codebreaker project
 
+### Testing
+- Having a Rake file makes testing easier, instead of having to type the ruby
+  testing commands.
+- Write tests the same way I would test in the command line, makes it easier!
+
 ### UX
 - even though this is a terminal app, intentional readability is very
   necessary to show what's clearly going on. without such, the app could be
