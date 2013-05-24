@@ -38,3 +38,6 @@ Specifically built to answer
 
 ### Credits
 - [@jdtornow](http://github.com/jdtornow) for helping me break down my original file `lib/primer/prime.rb` into smaller chunks & for giving me a 101 on testing!
+- [@ernie](http://github.com/ernie) for giving me perspective on naming
+  conventions and evaluating true use case for the project - command line app
+  vs what I have now (with the messages, outputs, etc)!
