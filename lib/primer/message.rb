@@ -2,7 +2,6 @@ module Primer
   class Message
 
     def initialize
-
     end
 
     def welcome
