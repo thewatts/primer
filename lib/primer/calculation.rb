@@ -32,6 +32,7 @@ module Primer
     end
 
     def calculate
+      self.reset
       @output.searching(@desired_prime)
       find_next_prime_number
       @output.solution(@desired_prime, primes.last)
@@ -49,6 +50,11 @@ module Primer
     def finish
       @output.exit
       exit
+    end
+
+    def reset
+      @primes = [2]
+      @num    = 3
     end
 
     # the length of our primes array will be the same as our desired prime.
