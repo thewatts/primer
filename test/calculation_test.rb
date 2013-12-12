@@ -1,4 +1,4 @@
-require 'test_helper'
+require './test/test_helper'
 
 # test "asdf" do
 #   primer = Primer.new

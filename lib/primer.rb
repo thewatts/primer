@@ -1,2 +1,2 @@
-require 'primer/calculation'
-require 'primer/message'
+require './lib/primer/calculation'
+require './lib/primer/message'
