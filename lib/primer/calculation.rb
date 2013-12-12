@@ -3,6 +3,10 @@ require 'progress_bar'
 module Primer
   class Calculation
 
+    def self.calculate(desired_prime)
+      new(desired_prime).calculate
+    end
+
     attr_accessor :primes, :num, :failure
     attr_reader   :desired_prime, :output
 
@@ -21,8 +25,8 @@ module Primer
     def run(desired_prime)
       unless desired_prime.downcase == "exit"
         @desired_prime = desired_prime.to_i
-        @bar           = ProgressBar.new(@desired_prime, :bar, :counter,
-                                         :percentage, :elapsed)
+        @bar = ProgressBar.new(@desired_prime, :bar, :counter,
+            :percentage, :elapsed)
         calculate
       else
         finish
@@ -30,7 +34,7 @@ module Primer
     end
 
     def calculate
-      self.reset
+      reset
       output.searching(@desired_prime)
       find_next_prime_number
       output.solution(@desired_prime, primes.last)
@@ -39,10 +43,6 @@ module Primer
 
     def continue
       output.continue
-    end
-
-    def self.calculate(desired_prime)
-      new(desired_prime).calculate
     end
 
     def finish
