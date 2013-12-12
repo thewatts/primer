@@ -3,10 +3,8 @@ require 'progress_bar'
 module Primer
   class Calculation
 
-    attr_accessor :primes
-    attr_accessor :num
-    attr_accessor :failure
-    attr_reader   :desired_prime
+    attr_accessor :primes, :num, :failure
+    attr_reader   :desired_prime, :output
 
     def initialize
       @output        = Primer::Message.new
@@ -16,8 +14,8 @@ module Primer
     end
 
     def start
-      @output.welcome
-      @output.start_prompt
+      output.welcome
+      output.start_prompt
     end
 
     def run(desired_prime)
@@ -33,14 +31,14 @@ module Primer
 
     def calculate
       self.reset
-      @output.searching(@desired_prime)
+      output.searching(@desired_prime)
       find_next_prime_number
-      @output.solution(@desired_prime, primes.last)
+      output.solution(@desired_prime, primes.last)
       continue
     end
 
     def continue
-      @output.continue
+      output.continue
     end
 
     def self.calculate(desired_prime)
